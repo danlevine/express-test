@@ -4,8 +4,10 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css')
     script(type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
     script(type='text/javascript' src='/javascripts/bootstrap.min.js')
+    script(type='text/javascript' src='http://fonts.googleapis.com/css?family=Muli:300,400,300italic,400italic')
   body
     nav(class='navbar navbar-default', role='navigation')
       div(class='container-fluid')
@@ -15,7 +17,9 @@ html
             span(class='icon-bar')
             span(class='icon-bar')
             span(class='icon-bar')
-          a(class='navbar-brand', href='/') Jamrock
+          a(class='navbar-brand', href='/')
+            i(class='fa fa-paper-plane') 
+            span  Jamrock
 
         div(class='collapse navbar-collapse', id='bs-navbar-collapse-1')
           ul.nav.navbar-nav
@@ -47,5 +51,7 @@ html
                   li.divider
                   li: a(href='#') Action4
                   li: a(href='#') Action5
-    div.content
-      block content
+    div.container.content
+      div.row
+        div.col-xs-12
+          block content

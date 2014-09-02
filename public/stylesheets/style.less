@@ -1,12 +1,32 @@
+@color-gray: #404040;
+@color-darkgray: #3c3c3c;
+@color-darkblue: #024959;
+@color-blue: #037ebc;
+@color-white: #ffffff;
+@color-orange: #f24c27;
+
 body {
   padding: 0px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Muli", "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: @color-gray;
+  color: @color-white;
 }
 
 a {
-  color: #00B7FF;
+  color: @color-blue;
 }
 
 .content {
-  padding:25px;
+  //background-color: @color-darkgray;
+}
+
+.navbar {
+  border-radius: 0;
+}
+
+.navbar-default .navbar-brand {
+  text-transform:uppercase;
+  font-size:.9em;
+  font-weight:bold;
+  color: @color-darkblue;
 }

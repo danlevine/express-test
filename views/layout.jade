@@ -4,54 +4,114 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/theme.css')
     link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css')
     script(type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
     script(type='text/javascript' src='/javascripts/bootstrap.min.js')
     script(type='text/javascript' src='http://fonts.googleapis.com/css?family=Muli:300,400,300italic,400italic')
   body
-    nav(class='navbar navbar-default', role='navigation')
-      div(class='container-fluid')
-        div(class='navbar-header')
-          button(type='button', class='navbar-toggle collapsed', data-toggle='collapse', data-target='#bs-navbar-collapse-1')
-            span(class='sr-only') Toggle navigation
-            span(class='icon-bar')
-            span(class='icon-bar')
-            span(class='icon-bar')
-          a(class='navbar-brand', href='/')
-            i(class='fa fa-paper-plane') 
-            span  Jamrock
 
-        div(class='collapse navbar-collapse', id='bs-navbar-collapse-1')
-          ul.nav.navbar-nav
-            li
-              a(href='/about') About
-              li.dropdown
-                a(href='#', class='dropdown-toggle', data-toggle='dropdown') Dropdown 
-                  span.caret
-                ul(class='dropdown-menu', role='menu')
-                  li: a(href='#') Action1
-                  li: a(href='#') Action2
-                  li: a(href='#') Action3
-                  li.divider
-                  li: a(href='#') Action4
-                  li: a(href='#') Action5
-          form(class='navbar-form navbar-left', role='search')
-            .form-group
-              input(type='text', class='form-control', placeholder='Search')
-            button(type='submit', class='btn btn-default') Submit
+    .navbar.navbar-default.navbar-fixed-top.visible-xs
+      .container
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='/')
+            i.fa.fa-paper-plane  Jamrock
+        .navbar-collapse.collapse
           ul.nav.navbar-nav.navbar-right
-            li: a(href='#') Link
+            li.active
+              a(href='/') Home
             li.dropdown
-              a(href='#', class='dropdown-toggle', data-toggle='dropdown') Dropdown
-                span.caret
-              ul(class='dropdown-menu', role='menu')
-                li: a(href='#') Action1
-                  li: a(href='#') Action2
-                  li: a(href='#') Action3
-                  li.divider
-                  li: a(href='#') Action4
-                  li: a(href='#') Action5
-    div.container.content
-      div.row
-        div.col-xs-12
-          block content
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Pages
+                b.caret
+              ul.dropdown-menu
+                li: a(href='services.html') Services
+                li: a(href='portfolio.html') Portfolio
+                li: a(href='portfolio-item.html') Portfolio Item
+                li: a(href='features.html') Features
+                li: a(href='pricing.html') Pricing
+                li: a(href='team.html') Team
+                li: a(href='careers.html') Careers
+                li: a(href='clients.html') Clients
+                li: a(href='faq.html') FAQ
+                li: a(href='blog.html') Blog
+                li: a(href='blog-post.html') Blog Single Post
+                li: a(href='gallery.html') Gallery
+                li: a(href='register.html') Sign Up
+                li: a(href='login.html') Sign In
+                li: a(href='recover-password.html') Recover Password
+                li: a(href='coming-soon.html') Coming Soon Page
+                li: a(href='error-404.html') 404 Error Page
+            li: a(href='/about') About
+            li: a(href='contact.html') Contact
+            li.visible-xs: a(href='register.html') Sign Up
+            li.visible-xs: a(href='login.html') Sign In
+            li.hidden-xs: a.btn.btn-main.btn-sm.btn-header(href='register.html') Sign Up
+            li.hidden-xs: a.btn.btn-main.btn-sm.btn-header(href='login.html') Sign In
+    ul#sidemenu.sidemenu.hidden-xs
+      li
+        a.sidemenu-brand(href='/')
+          i.fa.fa-paper-plane  JAMROCK
+      li
+        a.selected(href='/')
+          i.fa.fa-home.fa-2x
+          br
+          | Home
+      li
+        a.flyout(href='#')
+          i.fa.fa-file.fa-2x
+          br
+          | Pages 
+          i.fa.fa-caret-right
+        ul.submenu
+          li.submenu-section
+            i.fa.fa-plus
+            |  Page Templates
+          li.submenu-item: a(href='services.html') Services
+          li.submenu-item: a(href='portfolio.html') Portfolio
+          li.submenu-item: a(href='portfolio-item.html') Portfolio Item
+          li.submenu-item: a(href='features.html') Features
+          li.submenu-item: a(href='pricing.html') Pricing
+          li.submenu-item: a(href='team.html') Team
+          li.submenu-item: a(href='careers.html') Careers
+          li.submenu-item: a(href='clients.html') Clients
+          li.submenu-item: a(href='faq.html') FAQ
+          li.submenu-item: a(href='blog.html') Blog
+          li.submenu-item: a(href='blog-post.html') Blog Single Post
+          li.submenu-item: a(href='gallery.html') Gallery
+          li.submenu-item: a(href='register.html') Sign Up
+          li.submenu-item: a(href='login.html') Sign In
+          li.submenu-item: a(href='recover-password.html') Recover Password
+          li.submenu-item: a(href='coming-soon.html') Coming Soon Page
+          li.submenu-item: a(href='error-404.html') 404 Error Page
+      li
+        a(href='/about')
+          i.fa.fa-info.fa-2x
+          br
+          | About
+      li
+        a(href='contact.html')
+          i.fa.fa-phone.fa-2x
+          br
+          | Contact
+
+
+    .content-area
+      #wrap
+        .container
+          .row
+            .col-xs-12
+              block content
+      
+      #footer-bottom
+        | © 2014 Jamrock. All rights reserved.
+
+
+
+
+    //- block content
+    script(type='text/javascript' src='/javascripts/default.js')

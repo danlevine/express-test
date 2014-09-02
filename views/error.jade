@@ -1,6 +1,8 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+  .container.error-404
+    i.fa.fa-bug.fa-5x
+    h1 Nom nom nom... The 404 bug ate this page.
+    p The page you are trying to access wasn't found. Maybe it never existed or maybe it got eaten by the nasty 404 bug. Who knows? You may start with our home page.
+    a(href="/" class="btn btn-main"): i.fa.fa-home &nbsp;Home Page

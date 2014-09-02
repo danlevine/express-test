@@ -6,4 +6,8 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'Jamrock'});
 });
 
+router.get('/about', function(req, res) {
+  res.render('about', { title: 'About'});
+});
+
 module.exports = router;

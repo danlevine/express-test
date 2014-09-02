@@ -3,8 +3,8 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
-    link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/theme.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css')
     script(type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
     script(type='text/javascript' src='/javascripts/bootstrap.min.js')
@@ -19,7 +19,8 @@ html
             span.icon-bar
             span.icon-bar
           a.navbar-brand(href='/')
-            i.fa.fa-paper-plane  Jamrock
+            i.fa.fa-paper-plane
+            |  Bread
         .navbar-collapse.collapse
           ul.nav.navbar-nav.navbar-right
             li.active
@@ -47,7 +48,7 @@ html
                 li: a(href='coming-soon.html') Coming Soon Page
                 li: a(href='error-404.html') 404 Error Page
             li: a(href='/about') About
-            li: a(href='contact.html') Contact
+            li: a(href='/contact') Contact
             li.visible-xs: a(href='register.html') Sign Up
             li.visible-xs: a(href='login.html') Sign In
             li.hidden-xs: a.btn.btn-main.btn-sm.btn-header(href='register.html') Sign Up
@@ -55,7 +56,8 @@ html
     ul#sidemenu.sidemenu.hidden-xs
       li
         a.sidemenu-brand(href='/')
-          i.fa.fa-paper-plane  JAMROCK
+          i.fa.fa-paper-plane
+          |  Bread
       li
         a.selected(href='/')
           i.fa.fa-home.fa-2x
@@ -94,7 +96,7 @@ html
           br
           | About
       li
-        a(href='contact.html')
+        a(href='/contact')
           i.fa.fa-phone.fa-2x
           br
           | Contact
@@ -108,7 +110,7 @@ html
               block content
       
       #footer-bottom
-        | © 2014 Jamrock. All rights reserved.
+        | © 2014 Bread. All rights reserved.
 
 
 

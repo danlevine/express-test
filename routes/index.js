@@ -14,4 +14,8 @@ router.get('/contact', function(req, res) {
   res.render('contact', { title: 'Contact'});
 });
 
+router.get('/gallery', function(req, res) {
+  res.render('gallery', { title: 'Gallery'});
+});
+
 module.exports = router;

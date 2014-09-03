@@ -25,59 +25,16 @@ block content
       .col-sm-3
         a.image-link(href='./includes/img/project-4.jpg')
           img.img-thumbnail.img-responsive(src='./includes/img/project-4.jpg', alt='')
+
     .row
-      .col-sm-3
-        a.image-link(href='./includes/img/project-5.jpg')
-          img.img-thumbnail.img-responsive(src='./includes/img/project-5.jpg', alt='')
-      .col-sm-3
-        a.image-link(href='./includes/img/project-6.jpg')
-          img.img-thumbnail.img-responsive(src='./includes/img/project-6.jpg', alt='')
-      .col-sm-3
-        a.image-link(href='./includes/img/project-7.jpg')
-          img.img-thumbnail.img-responsive(src='./includes/img/project-7.jpg', alt='')
-      .col-sm-3
-        a.image-link(href='./includes/img/project-8.jpg')
-          img.img-thumbnail.img-responsive(src='./includes/img/project-8.jpg', alt='')
-    .row
-      .col-sm-3
-        a.image-link(href='./includes/img/project-9.jpg')
-          img.img-thumbnail.img-responsive(src='./includes/img/project-9.jpg', alt='')
-      .col-sm-3
-        a.image-link(href='./includes/img/project-10.jpg')
-          img.img-thumbnail.img-responsive(src='./includes/img/project-10.jpg', alt='')
-      .col-sm-3
-        a.image-link(href='./includes/img/project-11.jpg')
-          img.img-thumbnail.img-responsive(src='./includes/img/project-11.jpg', alt='')
-      .col-sm-3
-        a.image-link(href='./includes/img/project-12.jpg')
-          img.img-thumbnail.img-responsive(src='./includes/img/project-12.jpg', alt='')
-    .row
-      .col-sm-3
-        a.image-link(href='./includes/img/project-13.jpg')
-          img.img-thumbnail.img-responsive(src='./includes/img/project-13.jpg', alt='')
-      .col-sm-3
-        a.image-link(href='./includes/img/project-14.jpg')
-          img.img-thumbnail.img-responsive(src='./includes/img/project-14.jpg', alt='')
-      .col-sm-3
-        a.image-link(href='./includes/img/project-15.jpg')
-          img.img-thumbnail.img-responsive(src='./includes/img/project-15.jpg', alt='')
-      .col-sm-3
-        a.image-link(href='./includes/img/project-16.jpg')
-          img.img-thumbnail.img-responsive(src='./includes/img/project-16.jpg', alt='')
-    .row
-      .col-sm-3
-        a.image-link(href='./includes/img/project-17.jpg')
-          img.img-thumbnail.img-responsive(src='./includes/img/project-17.jpg', alt='')
-      .col-sm-3
-        a.image-link(href='./includes/img/project-18.jpg')
-          img.img-thumbnail.img-responsive(src='./includes/img/project-18.jpg', alt='')
-      .col-sm-3
-        a.image-link(href='./includes/img/project-19.jpg')
-          img.img-thumbnail.img-responsive(src='./includes/img/project-19.jpg', alt='')
-      .col-sm-3
-        a.image-link(href='./includes/img/project-20.jpg')
-          img.img-thumbnail.img-responsive(src='./includes/img/project-20.jpg', alt='')
-    ul.pagination
+      - each itemURL in itemURLs
+        p
+          = itemURL
+
+          //- a.image-link(href='./includes/img/project-4.jpg')
+          //- img.img-thumbnail.img-responsive(src='', alt='')
+          //- p= itemURL
+    ul.pagination.hidden
       li.disabled
         a(href='#') «
       li.active
